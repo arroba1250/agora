@@ -84,22 +84,22 @@ You need accounts and API keys for:
 ### 3. Create the database table
 
 ```sql
-CREATE TABLE dbo.debate_sessions (
-    id          INT              IDENTITY(1,1) PRIMARY KEY,
-    sesion_id   UNIQUEIDENTIFIER NOT NULL,
-    ronda       INT              NOT NULL,
-    alias       NVARCHAR(50),
-    modelo_real NVARCHAR(50),
-    rol         NVARCHAR(50),
-    respuesta   NVARCHAR(MAX),
-    timestamp   DATETIME         DEFAULT GETDATE()
+CREATE TABLE dbo.debate_sessions_v12 (
+    id           INT              IDENTITY(1,1) PRIMARY KEY,
+    session_id   UNIQUEIDENTIFIER NOT NULL,
+    round_num    INT              NOT NULL,
+    alias        NVARCHAR(50),
+    model_name   NVARCHAR(50),
+    role         NVARCHAR(50),
+    response     NVARCHAR(MAX),
+    created_at   DATETIME         DEFAULT GETDATE()
 );
 ```
 
 ### 4. Set your topic
 
-Edit `tema.txt` with your debate topic (no length limit).
-Edit `marco.txt` with your analysis framework, constraints, and criteria.
+Edit `topic.txt` with your debate topic (no length limit).
+Edit `framework.txt` with your analysis framework, constraints, and criteria.
 
 ---
 
@@ -113,8 +113,8 @@ Or from Python directly:
 from debate import run_debate
 from pathlib import Path
 
-topic    = Path("tema.txt").read_text(encoding="utf-8").strip()
-framework = Path("marco.txt").read_text(encoding="utf-8").strip()
+topic    = Path("topic.txt").read_text(encoding="utf-8").strip()
+framework = Path("framework.txt").read_text(encoding="utf-8").strip()
 
 run_debate(topic, framework)
 ```
@@ -160,8 +160,8 @@ v1.2/
 ├── debate.py          # All logic: clients, SQL, orchestration
 ├── prompts.py         # All system prompts as string constants
 ├── agora_v1.2.ipynb   # Notebook — configure and run
-├── tema.txt           # Your debate topic (edit this)
-├── marco.txt          # Your analysis framework (edit this)
+├── topic.txt           # Your debate topic (edit this)
+├── framework.txt          # Your analysis framework (edit this)
 ├── .env.example       # Credential template
 ├── .env               # Your actual credentials (NOT in git)
 └── README.md

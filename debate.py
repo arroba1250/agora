@@ -39,9 +39,9 @@ def _get_conn():
                 raise e
 
 def _insert(session_id, round_num, alias, model_name, role, response):
-    check = "SELECT COUNT(*) FROM dbo.debate_sessions WHERE sesion_id=? AND ronda=? AND alias=?"
-    insert_sql = """INSERT INTO dbo.debate_sessions
-                    (sesion_id, ronda, alias, modelo_real, rol, respuesta)
+    check = "SELECT COUNT(*) FROM dbo.debate_sessions_v12 WHERE session_id=? AND round_num=? AND alias=?"
+    insert_sql = """INSERT INTO dbo.debate_sessions_v12
+                    (session_id, round_num, alias, model_name, role, response)
                     VALUES (?,?,?,?,?,?)"""
     with _get_conn() as conn:
         cur = conn.cursor()
@@ -55,10 +55,10 @@ def _insert(session_id, round_num, alias, model_name, role, response):
 
 def _get_context(session_id, round_num=None) -> str:
     if round_num:
-        sql = "SELECT alias, ronda, respuesta FROM dbo.debate_sessions WHERE sesion_id=? AND ronda=? ORDER BY id"
+        sql = "SELECT alias, round_num, response FROM dbo.debate_sessions_v12 WHERE session_id=? AND round_num=? ORDER BY id"
         params = (str(session_id), round_num)
     else:
-        sql = "SELECT alias, ronda, respuesta FROM dbo.debate_sessions WHERE sesion_id=? ORDER BY ronda, id"
+        sql = "SELECT alias, round_num, response FROM dbo.debate_sessions_v12 WHERE session_id=? ORDER BY round_num, id"
         params = (str(session_id),)
     with _get_conn() as conn:
         cur = conn.cursor()
@@ -72,7 +72,7 @@ def _get_context(session_id, round_num=None) -> str:
 _gpt_client = AzureOpenAI(
     azure_endpoint=os.environ["AZURE_OPENAI_ENDPOINT"],
     api_key=os.environ["AZURE_OPENAI_KEY"],
-    api_version="2025-01-01-preview",
+    api_version="2025-03-01-preview",
 )
 _GPT_MODEL = os.environ.get("AZURE_OPENAI_DEPLOYMENT", "gpt-4.1")
 
@@ -90,12 +90,13 @@ _GROK_MODEL = os.environ.get("GROK_MODEL", "grok-3")
 
 # ── Model call functions ───────────────────────────────────────
 def call_gpt(system_prompt, user_prompt, temperature=0.7):
-    r = _gpt_client.chat.completions.create(
-        model=_GPT_MODEL, temperature=temperature,
-        messages=[{"role": "system", "content": system_prompt},
-                  {"role": "user", "content": user_prompt}],
+    r = _gpt_client.responses.create(
+        model=_GPT_MODEL,
+        instructions=system_prompt,
+        input=user_prompt,
+        temperature=temperature,
     )
-    return r.choices[0].message.content.strip()
+    return r.output_text.strip()
 
 def call_gemini(system_prompt, user_prompt, temperature=0.7):
     model = genai.GenerativeModel(
@@ -107,7 +108,7 @@ def call_gemini(system_prompt, user_prompt, temperature=0.7):
 
 def call_claude(system_prompt, user_prompt, temperature=0.7):
     msg = _claude_client.messages.create(
-        model=_CLAUDE_MODEL, max_tokens=2048, temperature=temperature,
+        model=_CLAUDE_MODEL, max_tokens=2048,
         system=system_prompt,
         messages=[{"role": "user", "content": user_prompt}],
     )
@@ -195,7 +196,7 @@ _PHASE_NAMES = {
 }
 
 def _format_export(session_id) -> str:
-    sql = "SELECT alias, ronda, respuesta FROM dbo.debate_sessions WHERE sesion_id=? ORDER BY ronda, id"
+    sql = "SELECT alias, round_num, response FROM dbo.debate_sessions_v12 WHERE session_id=? ORDER BY round_num, id"
     with _get_conn() as conn:
         cur = conn.cursor()
         cur.execute(sql, (str(session_id),))

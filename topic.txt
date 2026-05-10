@@ -1,0 +1,7 @@
+FIFA World Cup 2026 — Who will win?
+
+The 2026 FIFA World Cup is being hosted across the United States, Canada, and Mexico. For the first time in history, the tournament features 48 teams in an expanded format with 104 matches total. The larger bracket changes the competitive dynamics significantly: more games mean more fatigue accumulation, more potential for upsets, and a longer road to the final for every contender.
+
+The leading contenders include Brazil, France, Argentina (defending champion), Spain, England, Germany, and Portugal. Each enters the tournament with different squad depth, tactical identity, recent form, and historical tournament pedigree.
+
+Your task: make a definitive case for which nation will lift the World Cup trophy in 2026, and explain specifically why the other top contenders will fall short.

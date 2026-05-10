@@ -1,0 +1,16 @@
+Analyze using the following weighted framework:
+
+1. Squad Quality & Depth (30%): Evaluate the starting XI quality, bench depth, and positional balance. Which squads can absorb injuries or suspensions across 7 matches without a significant drop in quality? Assess the goalkeeper, defensive line, midfield control, and attacking threat as distinct dimensions.
+
+2. Tactical Identity & Coaching (25%): Assess the head coach's tournament experience and tactical flexibility. Which teams have a clear, proven system vs. reliance on individual brilliance? How does each contender adapt when the initial game plan fails — as it inevitably will in a knockout round?
+
+3. Tournament Pedigree & Mental Resilience (25%): Evaluate historical World Cup performance under pressure. Which nations consistently perform in knockouts vs. which collapse in quarterfinals or semifinals? Factor in the expanded 48-team format: the path to the final is longer, which rewards consistency over peak performance in one match.
+
+4. Form, Fitness & Competition Context (20%): Assess recent international results (2024-2026 window), key player ages and injury history entering the tournament, and the physical demands of the host continent's summer heat and travel distances across three host countries.
+
+Hard constraints on analysis:
+- Name specific players, not just nationalities — argue from concrete squad facts
+- Acknowledge the role of luck and draw bracket explicitly, not just quality
+- Do not default to "the best team doesn't always win" as an escape from making a prediction — commit to a winner
+- Distinguish between "most likely winner" and "best team in the world" — they are not always the same
+- The disruptor analyst should question whether the entire framing of "favorites" is meaningful in a 48-team tournament with expanded upsets
