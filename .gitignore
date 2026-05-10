@@ -1,0 +1,19 @@
+# Environment — never commit credentials
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Debate outputs (optional — remove if you want to track them)
+debate_*.txt
+
+# OS
+.DS_Store
+Thumbs.db

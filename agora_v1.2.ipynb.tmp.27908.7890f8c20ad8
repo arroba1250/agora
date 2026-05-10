@@ -1,0 +1,84 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "cell-header",
+   "metadata": {},
+   "source": [
+    "# Agora v1.2 — Multi-Agent LLM Debate\n",
+    "\n",
+    "Four frontier models debate a topic in structured rounds, guided by an independent judge, until they produce an executive synthesis.\n",
+    "\n",
+    "| Role | Model |\n",
+    "|---|---|\n",
+    "| Analyst A | GPT-4.1 (Azure OpenAI) |\n",
+    "| Analyst B | Gemini 2.5 Pro (Google) |\n",
+    "| Analyst C | Claude Opus 4.7 (Anthropic) |\n",
+    "| Analyst D | Grok-3 — The Disruptor (xAI) |\n",
+    "| Judge | Grok-3 (xAI) |\n",
+    "\n",
+    "**To run a new debate:** edit `tema.txt` and `marco.txt`, then Run All."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "cell-imports",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import sys\n",
+    "\n",
+    "# Reload modules on every run so edits to debate.py / prompts.py take effect immediately\n",
+    "for mod in [\"debate\", \"prompts\"]:\n",
+    "    sys.modules.pop(mod, None)\n",
+    "\n",
+    "sys.path.insert(0, r\"D:\\Dropbox\\Personal\\Documentos\\Personal\\Proyectos\\Agora\\v1.2\")\n",
+    "from debate import run_debate\n",
+    "\n",
+    "print(\"Ready.\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "cell-config",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from pathlib import Path\n",
+    "\n",
+    "_base = Path(r\"D:\\Dropbox\\Personal\\Documentos\\Personal\\Proyectos\\Agora\\v1.2\")\n",
+    "\n",
+    "TOPIC     = (_base / \"tema.txt\").read_text(encoding=\"utf-8\").strip()\n",
+    "FRAMEWORK = (_base / \"marco.txt\").read_text(encoding=\"utf-8\").strip()\n",
+    "\n",
+    "print(f\"TOPIC     ({len(TOPIC)} chars): {TOPIC[:120]}{'...' if len(TOPIC) > 120 else ''}\")\n",
+    "print(f\"\\nFRAMEWORK ({len(FRAMEWORK)} chars): {FRAMEWORK[:120]}{'...' if len(FRAMEWORK) > 120 else ''}\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "cell-run",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "run_debate(TOPIC, FRAMEWORK)"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "name": "python",
+   "version": "3.10.0"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
