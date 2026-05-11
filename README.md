@@ -10,7 +10,7 @@ Built in Python. No frameworks. Just APIs, a SQL database, and some prompt engin
 
 ```
 PRE-DEBATE
-  GPT-4.1 generates 4 expert roles tailored to the specific topic.
+  GPT-5.4 generates 4 expert roles tailored to the specific topic.
   Roles are dynamically created — no hardcoded personas.
 
 ROUND 1 — Blind positions (temp 0.9)
@@ -31,7 +31,7 @@ ROUND 4 — Final round (temp 0.6)
   If reached, synthesis is mandatory regardless of judge decision.
 
 EXECUTIVE SYNTHESIS
-  GPT-4.1 reads the full debate and writes a 3-5 paragraph executive conclusion:
+  GPT-5.4 reads the full debate and writes a 3-5 paragraph executive conclusion:
   convergences, unresolved tensions, and an actionable recommendation.
   Saved to Azure SQL and exported to a timestamped TXT file.
 ```
@@ -42,12 +42,12 @@ EXECUTIVE SYNTHESIS
 
 | Role | Model | Character |
 |---|---|---|
-| Analyst A | GPT-4.1 (Azure OpenAI) | Dynamically assigned |
+| Analyst A | GPT-5.4 (Azure OpenAI) | Dynamically assigned |
 | Analyst B | Gemini 2.5 Pro (Google) | Dynamically assigned |
 | Analyst C | Claude Opus 4.7 (Anthropic) | Dynamically assigned |
 | Analyst D | Grok-3 (xAI) | The Disruptor — questions the premise |
 | Judge | Grok-3 (xAI) | Independent referee |
-| Synthesizer | GPT-4.1 (Azure OpenAI) | Executive conclusion |
+| Synthesizer | GPT-5.4 (Azure OpenAI) | Executive conclusion |
 
 **Key design decisions:**
 - Analysts never know which model the others are — they only see aliases (Analyst A/B/C/D)
@@ -75,7 +75,7 @@ cp .env.example .env
 ```
 
 You need accounts and API keys for:
-- **Azure OpenAI** — deploy a GPT-4.1 model in your resource
+- **Azure OpenAI** — deploy a GPT-5.4 model in your resource
 - **Google AI Studio** — Gemini 2.5 Pro access
 - **Anthropic** — Claude Opus 4.7
 - **xAI** — Grok-3 API access (console.x.ai)

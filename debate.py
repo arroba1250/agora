@@ -74,7 +74,7 @@ _gpt_client = AzureOpenAI(
     api_key=os.environ["AZURE_OPENAI_KEY"],
     api_version="2025-03-01-preview",
 )
-_GPT_MODEL = os.environ.get("AZURE_OPENAI_DEPLOYMENT", "gpt-4.1")
+_GPT_MODEL = os.environ.get("AZURE_OPENAI_DEPLOYMENT", "gpt-5.4")
 
 genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
 _GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-pro")
