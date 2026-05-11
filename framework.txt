@@ -1,16 +1,98 @@
 Analyze using the following weighted framework:
 
-1. Squad Quality & Depth (30%): Evaluate the starting XI quality, bench depth, and positional balance. Which squads can absorb injuries or suspensions across 7 matches without a significant drop in quality? Assess the goalkeeper, defensive line, midfield control, and attacking threat as distinct dimensions.
+1. Squad Quality & Depth (30%): Evaluate the starting XI quality, bench depth, and positional balance. Which squads can absorb injuries or suspensions across 7-8 matches without a significant drop in quality? Assess the goalkeeper, defensive line, midfield control, and attacking threat as distinct dimensions. Factor in the CONFIRMED absences listed below.
 
 2. Tactical Identity & Coaching (25%): Assess the head coach's tournament experience and tactical flexibility. Which teams have a clear, proven system vs. reliance on individual brilliance? How does each contender adapt when the initial game plan fails — as it inevitably will in a knockout round?
 
-3. Tournament Pedigree & Mental Resilience (25%): Evaluate historical World Cup performance under pressure. Which nations consistently perform in knockouts vs. which collapse in quarterfinals or semifinals? Factor in the expanded 48-team format: the path to the final is longer, which rewards consistency over peak performance in one match.
+3. Tournament Pedigree & Mental Resilience (25%): Evaluate historical World Cup performance under pressure. Which nations consistently perform in knockouts vs. which collapse? Factor in the expanded format: 8 matches to win the title (group stage + Round of 32 + Round of 16 + QF + SF + Final) rewards consistency over peak performance in one match.
 
-4. Form, Fitness & Competition Context (20%): Assess recent international results (2024-2026 window), key player ages and injury history entering the tournament, and the physical demands of the host continent's summer heat and travel distances across three host countries.
+4. Form, Fitness & Competition Context (20%): Assess the physical demands of the host cities' summer heat and the confirmed injury situation for each squad entering the tournament.
+
+---
+
+CURRENT FACTUAL CONTEXT — Updated May 10, 2026
+Use this information as the factual basis for your analysis. Do not speculate about things already confirmed here.
+
+TOURNAMENT FORMAT AND DATES
+- Start: June 11, 2026 (Mexico City, Azteca — Mexico vs South Africa)
+- Final: July 19, 2026 (MetLife Stadium, New Jersey)
+- 48 teams, 12 groups of 4, 104 matches total
+- Qualification: Top 2 per group + 8 best third-place teams → Round of 32
+- New round: Round of 32 (never existed before) adds one extra match for every team that advances
+- Total matches to win the title: 8 (up from 7 in Qatar 2022)
+
+CONFIRMED DRAW — ALL 12 GROUPS
+Group A: Mexico, South Africa, South Korea, Czechia
+Group B: Canada, Bosnia and Herzegovina, Qatar, Switzerland
+Group C: Brazil, Morocco, Haiti, Scotland
+Group D: United States, Paraguay, Australia, Turkey
+Group E: Germany, Curacao, Ivory Coast, Ecuador
+Group F: Netherlands, Japan, Sweden, Tunisia
+Group G: Belgium, Egypt, Iran, New Zealand
+Group H: Spain, Cape Verde, Saudi Arabia, Uruguay
+Group I: France, Senegal, Iraq, Norway
+Group J: Argentina, Algeria, Austria, Jordan
+Group K: Portugal, Colombia, DR Congo, Uzbekistan
+Group L: England, Croatia, Ghana, Panama
+
+BRACKET PATHWAY NOTE: Spain and Argentina are on opposite sides of the bracket from France and England. If all four win their groups, France and England cannot meet before the semifinals — same for Spain and Argentina. A France vs England semifinal and a Spain vs Argentina semifinal is the top-seed scenario.
+
+HOST CITIES AND HEAT — CRITICAL FACTOR
+Knockout stage assignments (confirmed):
+- Round of 16: Houston, Philadelphia, New York/NJ, Mexico City, Dallas, Seattle, Atlanta, Vancouver
+- Quarterfinals: Boston, Los Angeles, Miami, Kansas City
+- Semifinals: Dallas (AT&T Stadium) and Atlanta (Mercedes-Benz Stadium)
+- Final: MetLife Stadium, New Jersey
+
+FIFPRO (FIFA's own players union) has formally identified 6 venues as "extremely high risk" for heat-stress injury:
+Atlanta, Dallas, Houston, Kansas City, Miami, and Monterrey.
+
+Both semifinal venues (Dallas and Atlanta) are on the extreme heat risk list. The Final (New Jersey, mid-July) is also warm but less extreme.
+
+Temperature reality in June-July:
+- Dallas, Houston, Monterrey: wet-bulb globe temperature can exceed 90°F (32°C); heat index 105–110°F (40–43°C) with humidity
+- Atlanta, Miami, Kansas City: consistently above 89°F (32°C) in afternoon
+- Cool venues: Vancouver (~18–22°C, covered stadium), Seattle (~20–24°C), San Francisco (~18–22°C), Boston (~24–27°C)
+
+FIFA mitigation: mandatory 3-minute cooling breaks at midpoint of each half, up to 5 substitutions, evening kick-off times prioritized in hot markets.
+
+CONFIRMED INJURIES — WILL MISS THE WORLD CUP ENTIRELY
+- Rodrygo (Brazil): torn ACL + meniscus (March 2026)
+- Eder Militao (Brazil): torn hamstring requiring surgery
+- Serge Gnabry (Germany): torn adductor (mid-April 2026)
+- Hugo Ekitike (France): ruptured Achilles tendon (April 2026)
+- Xavi Simons (Netherlands): torn ACL (late April 2026)
+- Jerdy Schouten (Netherlands): torn ACL (April 2026)
+- Jack Grealish (England): foot injury
+- Jarrad Branthwaite (England): thigh injury
+- Juan Foyth (Argentina): knee
+- Samu Aghehowa (Spain): knee
+
+SERIOUS DOUBTS — RACING TO BE FIT (status as of May 10, 2026)
+- Kylian Mbappé (France): hamstring (April 24 vs Real Betis), no confirmed return date, expected available but not guaranteed
+- Lamine Yamal (Spain): hamstring (April 22 vs Celta Vigo), "expected to be available" — not guaranteed
+- Cristian Romero (Argentina): partial MCL tear (April 12), expected return ~June 17, tight for group stage
+- Estevao (Brazil): hamstring (April 18), possibly available only for knockout rounds
+- Rodri (Spain): groin injury, more serious than initially reported (May 9); Guardiola says "good for the World Cup" but minutes management ongoing; made first Spain start since 2024 ACL recovery only in March 2026
+- Alphonso Davies (Canada): hamstring, out several weeks
+
+CONFIRMED FIT — KEY PLAYERS
+- Vinícius Jr. (Brazil): fully fit, scored brace vs Espanyol (early May 2026), 16 goals in 26 games in 2026
+- Jude Bellingham (England): returned from injury, started 5 consecutive games, available but not at peak form
+- Pedri (Spain): returned from January 2026 hamstring injury, back in Barcelona squad
+
+RECENT FORM — NOTABLE RESULTS
+- France beat Brazil 2-1 in a May 2026 friendly (Mbappé scored; France finished with 10 men)
+- Brazil: lost to Bolivia in qualifying; blew a 2-0 lead vs Japan, conceding 3 in 19 minutes
+- Argentina: first team to clinch 2026 qualification (March 2025); won last two Copa América tournaments
+- Spain: won Euro 2024, including without Rodri in the final
+
+---
 
 Hard constraints on analysis:
-- Name specific players, not just nationalities — argue from concrete squad facts
-- Acknowledge the role of luck and draw bracket explicitly, not just quality
-- Do not default to "the best team doesn't always win" as an escape from making a prediction — commit to a winner
-- Distinguish between "most likely winner" and "best team in the world" — they are not always the same
-- The disruptor analyst should question whether the entire framing of "favorites" is meaningful in a 48-team tournament with expanded upsets
+- Name specific players and cite the injury list above — do not treat confirmed absences as available
+- The draw is done — argue from actual group assignments and bracket pathways, not hypothetical scenarios
+- Address heat explicitly: both semifinal venues are on FIFPRO's extreme heat risk list. This is not a minor caveat.
+- Do not default to "the best team doesn't always win" as an escape — commit to a winner with a probability estimate
+- Distinguish between "most likely winner" and "best team in the world" — they are not the same
+- The disruptor analyst should question whether the traditional favorites framework holds when Brazil has lost both Rodrygo and Militao, when Mbappé and Yamal are injury doubts, and when the two semifinal venues are in extreme heat conditions that European-style systems are not designed for

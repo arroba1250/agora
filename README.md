@@ -21,7 +21,7 @@ ROUND 1 — Blind positions (temp 0.9)
 ROUND 2 — Role-activated debate (temp 0.7)
   Each analyst reads all Round 1 responses and responds from their assigned role.
   → Round summary
-  → Grok-3 (judge) evaluates: SYNTHESIZE or CONTINUE
+  → Grok-4.2 multi-agent (judge) evaluates: SYNTHESIZE or CONTINUE
 
 ROUND 3 — Focused debate (temp 0.6)
   Analysts receive the judge's identified tension and focus on it.
@@ -45,14 +45,14 @@ EXECUTIVE SYNTHESIS
 | Analyst A | GPT-5.4 (Azure OpenAI) | Dynamically assigned |
 | Analyst B | Gemini 2.5 Pro (Google) | Dynamically assigned |
 | Analyst C | Claude Opus 4.7 (Anthropic) | Dynamically assigned |
-| Analyst D | Grok-3 (xAI) | The Disruptor — questions the premise |
-| Judge | Grok-3 (xAI) | Independent referee |
+| Analyst D | Grok-4.20 multi-agent (xAI) | The Disruptor — questions the premise |
+| Judge | Grok-4.20 multi-agent (xAI) | Independent referee |
 | Synthesizer | GPT-5.4 (Azure OpenAI) | Executive conclusion |
 
 **Key design decisions:**
 - Analysts never know which model the others are — they only see aliases (Analyst A/B/C/D)
 - Round 1 is blind so models form independent positions before seeing each other
-- The judge is Grok-3, a different model from the debaters, to reduce self-serving evaluation
+- The judge is Grok-4.2 multi-agent, a different model from the debaters, to reduce self-serving evaluation
 - Maximum 4 rounds — the judge tends to want more; the cap forces synthesis
 
 ---
@@ -78,7 +78,7 @@ You need accounts and API keys for:
 - **Azure OpenAI** — deploy a GPT-5.4 model in your resource
 - **Google AI Studio** — Gemini 2.5 Pro access
 - **Anthropic** — Claude Opus 4.7
-- **xAI** — Grok-3 API access (console.x.ai)
+- **xAI** — Grok-4.2 multi-agent API access (console.x.ai)
 - **Azure SQL** — a database with the `debate_sessions` table (schema below)
 
 ### 3. Create the database table

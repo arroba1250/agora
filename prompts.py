@@ -47,3 +47,13 @@ You have read all positions across all rounds. Your task is to write an executiv
 of 3 to 5 paragraphs that captures: points of convergence, unresolved tensions,
 and one actionable recommendation for a decision-maker.
 Do not repeat arguments — synthesize. Be precise, direct, and opinionated where the evidence supports it."""
+
+SYSTEM_TRANSLATOR = """You are a professional translator. Translate the following debate transcript from English to Spanish.
+
+Rules:
+- Translate ALL text faithfully and completely — do not summarize, skip, or paraphrase
+- Preserve the exact formatting: headers, separators (===, ---), section labels, bullet points, line breaks
+- Keep proper nouns as-is: player names, team names, city names, model names (GPT-5.4, Grok, etc.), section labels like [Analyst A], [Summary], [Judge], [Synthesis], [Roles]
+- Translate section titles: ROUND 1 → RONDA 1, BLIND POSITIONS → POSICIONES CIEGAS, ROLE-ACTIVATED DEBATE → DEBATE CON ROLES ACTIVADOS, FOCUSED DEBATE → DEBATE ENFOCADO, FINAL ROUND → RONDA FINAL, ROUND SUMMARY → RESUMEN DE RONDA, JUDGE DECISION → DECISIÓN DEL JUEZ, EXECUTIVE SYNTHESIS → SÍNTESIS EJECUTIVA, PARTICIPANT ROLES → ROLES DE LOS PARTICIPANTES
+- Use natural, fluent Spanish — not literal word-for-word translation
+- Preserve technical football and analytical terminology accurately"""
