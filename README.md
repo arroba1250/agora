@@ -13,22 +13,24 @@ PRE-DEBATE
   GPT-5.4 generates 4 expert roles tailored to the specific topic.
   Roles are dynamically created — no hardcoded personas.
 
-ROUND 1 — Blind positions (temp 0.9)
+ROUND 1 — Blind positions (no judge)
   Each analyst responds only to the topic and framework.
   They cannot see each other's answers. Maximum diversity of initial positions.
-  → Round summary generated at the end.
+  → Round summary. No judge — Round 1 always runs.
 
-ROUND 2 — Role-activated debate (temp 0.7)
+ROUND 2 — Role-activated debate
   Each analyst reads all Round 1 responses and responds from their assigned role.
   → Round summary
-  → Grok-4.2 multi-agent (judge) evaluates: SYNTHESIZE or CONTINUE
+  → Judge evaluates: SYNTHESIZE → debate ends | CONTINUE → Round 3
 
-ROUND 3 — Focused debate (temp 0.6)
+ROUND 3 — Focused debate
   Analysts receive the judge's identified tension and focus on it.
-  → Round summary + judge evaluation
+  → Round summary
+  → Judge evaluates: SYNTHESIZE → debate ends | CONTINUE → Round 4
 
-ROUND 4 — Final round (temp 0.6)
-  If reached, synthesis is mandatory regardless of judge decision.
+ROUND 4 — Final round (mandatory synthesis)
+  If reached, the judge is instructed to SYNTHESIZE regardless of its assessment.
+  The cap exists because the judge tends to always want one more round.
 
 EXECUTIVE SYNTHESIS
   GPT-5.4 reads the full debate and writes a 3-5 paragraph executive conclusion:
